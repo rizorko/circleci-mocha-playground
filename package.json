@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha -R json-stream > report.json"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +13,8 @@
     "express": "^4.16.3",
     "mocha": "^5.2.0",
     "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "reporter-file": "^1.0.0"
   }
 }
