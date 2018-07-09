@@ -4,6 +4,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:8.11.3
+    environment:
+      MOCHA_FILE: "test-results.xml"
 
     working_directory: ~
 
@@ -30,10 +32,10 @@ jobs:
       - run: yarn test
 
       - store_artifacts:
-          path: report.json
+          path: test-results.xml
           prefix: tests
 
       - store_test_results:
-          path: report.json
+          path: test-results.xml
 
 
