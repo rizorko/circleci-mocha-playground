@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image circlecinode7.10
+      - image: circlecinode7.10
 
     working_directory: ~repo
 
